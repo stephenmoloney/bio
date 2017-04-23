@@ -11,7 +11,8 @@ defmodule Bio.Mixfile do
       elixirc_paths: elixirc_paths(Mix.env),
       deps: deps(),
       description: description(),
-      docs: docs()
+      docs: docs(),
+      package: package()
     ]
   end
 
@@ -23,7 +24,9 @@ defmodule Bio.Mixfile do
 
   defp deps() do
     [
-      # dev deps
+      {:flow, "~> 0.11"},
+
+      # dev
       {:ex_doc,  "~> 0.14", only: [:dev]},
     ]
   end
@@ -53,7 +56,7 @@ defmodule Bio.Mixfile do
     ["lib"]
   end
 
-  defp package do
+  defp package() do
     %{
       licenses: ["Apache 2.0"],
       maintainers: ["Stephen Moloney"],

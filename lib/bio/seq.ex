@@ -1,6 +1,10 @@
 defmodule Bio.Seq do
   @moduledoc """
-  Behaviour for Sequencing modules.
+  Sequencing functions.
   """
+
+  def reverse(seq) when is_binary(seq) do
+    String.reverse(seq)
+  end
 
 end
